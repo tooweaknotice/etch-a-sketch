@@ -11,9 +11,8 @@ let gridDim = 16;
 const resizeButton = document.querySelector(`.resize-button`);
 resizeButton.addEventListener(`click`, () => {
   let userSelectedDim = Number(prompt(`Enter Grid Dimension.`,`16`));
-  while (isNaN(userSelectedDim)) {
-    const errorMsg = document.createElement(`div`);
-    errorMsg.textContent = `Please enter a valid number.`
+  while (isNaN(userSelectedDim) || userSelectedDim < 1 || userSelectedDim > 100) {
+    alert(`Please enter a valid number from 1-100.`);
     userSelectedDim = Number(prompt(`Enter Grid Dimension.`,`16`));
   }
   gridDim = Number(userSelectedDim);

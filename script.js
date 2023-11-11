@@ -20,7 +20,7 @@ resizeButton.addEventListener(`click`, () => {
   drawGrid(gridDim);
 })
 
-const resizeObserver = new ResizeObserver((entries) => {
+const gridResizeObs = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentRect) {
       resizePixels(entry.contentRect.width, gridDim);
@@ -28,7 +28,7 @@ const resizeObserver = new ResizeObserver((entries) => {
   }
 })
 
-resizeObserver.observe(document.querySelector(`.grid-container`));
+gridResizeObs.observe(document.querySelector(`.grid-container`));
 
 function resizePixels(containerDim = 1, dim = 16) {
   const pixels = document.querySelectorAll(`.pixel`);

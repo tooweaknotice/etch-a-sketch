@@ -60,7 +60,10 @@ function drawGrid(dim = 16){
       pixel.style.boxSizing = `border-box`;
       pixel.classList.add(`pixel`);
       pixel.addEventListener('mouseenter', () => {
-        pixel.style.backgroundColor = `#333333`;
+        let red = Math.round(Math.random() * 255).toString(16);
+        let green = Math.round(Math.random() * 255).toString(16);
+        let blue = Math.round(Math.random() * 255).toString(16);
+        pixel.style.backgroundColor = `#` + red + green + blue;
       })
       pixelRow.appendChild(pixel);
     }

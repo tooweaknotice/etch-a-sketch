@@ -17,7 +17,6 @@ resizeButton.addEventListener(`click`, () => {
     userSelectedDim = Number(prompt(`Enter Grid Dimension.`,`16`));
   }
   gridDim = Number(userSelectedDim);
-  const gridContainer = document.querySelector(`.grid-container`);
   deletePixels();
   drawGrid(gridDim);
 })

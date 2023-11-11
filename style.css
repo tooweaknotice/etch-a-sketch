@@ -5,10 +5,15 @@ body {
 
 .grid-container {
   align-self: center;
-  border: 1px solid black;
-  margin-top: 15vh;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 40vw;
+  height: 40vw;
 }
